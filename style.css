@@ -49,7 +49,7 @@
     font-size: 18px;
 }
 
-a {
+.menu-lateral a {
     font-family: var(--fonte);
     font-weight: 200;
     font-size: 18px;
@@ -60,15 +60,19 @@ a {
 .itens-menu {
     display: flex;
     gap: 20px;
-    list-style-type: none;
-    padding: 20px;
-    transition: background-color 0.3s ease;
-    border: none;
-    border-radius: 5px;
     align-items: center;
+    list-style-type: none;
+    padding: 14px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .itens-menu:hover {
     background-color: var(--cor-botoes);
 
 }
+
+.itens-menu i {
+    color: var(--cor-fundo);
+}
+
