@@ -87,17 +87,16 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    
+    align-items: flex-start;
 }
 
 .card {
     font-family: var(--fonte);
     font-weight: 200;
-    height: 150px;
-    width: 230px;
-    border: 1px solid #a7a2a2d3;
+    height: 100px;
+    width: 250px;
     border-radius: 10px;
-    text-align: center;
+    text-align: justify;
 }
 
 .card-1 {
@@ -105,10 +104,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    border: 1px solid #7d76bdd3;
+    background-color: #c8d9eb10;
 }
 
 .card-1 i {
-    background-color: #3976b85d;
+    background-color: #7f9cbb3a;
     height: 30px;
     width: 30px;
     border-radius: 50px;
@@ -116,6 +118,82 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.texto-1-card {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.texto-2-card {
+    font-size: 13px;
+}
+
+.dados-texto {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.card-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #9ed8c167;
+    background-color: #a3e0c81c;
+}
+
+.card-2 i {
+    background-color: #99d6bc27;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    color: var(--cor-verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d98b2456;
+    background-color: #ecca9d48;
+}
+
+.card-3 i {
+    background-color: #ffa63148;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    color: var(--cor-amarelo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e762623b;
+    background-color: #f06e6e41;
+}
+
+.card-4 i {
+    background-color: #e78d8d6e;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    color: var(--cor-vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
