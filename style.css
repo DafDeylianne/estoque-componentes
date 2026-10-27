@@ -25,7 +25,8 @@
 
 .menu-lateral {
     width: 300px;
-    height: 100vh;
+    min-width: 300px;
+    min-height: 100vh;
     background-color: var(--cor-lateral);
     padding: 20px;
 }
@@ -78,122 +79,124 @@
 
 .layout {
     display: flex;
-    flex-direction: row;
+    min-height: 100vh;
 }
 
+/* Área principal */
 .area-principal {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+    min-width: 0;
+    background-color: var(--cor-fundo);
 }
 
+/* Estrutura compartilhada dos cards */
 .card {
-    font-family: var(--fonte);
-    font-weight: 200;
-    height: 100px;
-    width: 250px;
-    border-radius: 10px;
-    text-align: justify;
-}
-
-.card-1 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    border: 1px solid #7d76bdd3;
+    gap: 12px;
+
+    width: 250px;
+    min-height: 100px;
+    padding: 12px;
+    flex-shrink: 0;
+
+    font-family: var(--fonte);
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+/* Bloco dos textos */
+.conteudo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+/* Título */
+.texto-1-card {
+    font-family: var(--fonte);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Número em destaque */
+.dados-texto {
+    font-family: var(--fonte);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+}
+
+/* Descrição */
+.texto-2-card {
+    font-family: var(--fonte);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* Ícones compartilhados */
+.card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Card 1 — Total */
+.card-1 {
+    border-color: #7d76bdd3;
     background-color: #c8d9eb10;
 }
 
 .card-1 i {
     background-color: #7f9cbb3a;
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
     color: var(--cor-azul);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.texto-1-card {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.texto-2-card {
-    font-size: 13px;
-}
-
-.dados-texto {
-    font-size: 25px;
-    font-weight: 700;
-}
-
+/* Card 2 — Em estoque */
 .card-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #9ed8c167;
+    border-color: #9ed8c167;
     background-color: #a3e0c81c;
 }
 
 .card-2 i {
-    background-color: #99d6bc27;
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
+    background-color: #99d6bc40;
     color: var(--cor-verde);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/* Card 3 — Estoque mínimo */
 .card-3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #d98b2456;
+    border-color: #d98b2456;
     background-color: #ecca9d48;
 }
 
 .card-3 i {
     background-color: #ffa63148;
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
     color: var(--cor-amarelo);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/* Card 4 — Sem estoque */
 .card-4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #e762623b;
+    border-color: #e762623b;
     background-color: #f06e6e41;
 }
 
 .card-4 i {
     background-color: #e78d8d6e;
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
     color: var(--cor-vermelho);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
