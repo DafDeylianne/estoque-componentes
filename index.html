@@ -1,90 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
+
     <title>Controle de componentes</title>
-<script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <div class="layout">
+
         <aside class="menu-lateral">
+
             <div class="cabecalho-menu">
-                <img src="img/implante-icon-removebg-preview.png" alt="Logotipo do estoque de componentes" class="img-logo">
+                <img
+                    src="img/implante-icon-removebg-preview.png"
+                    alt="Logotipo do estoque de componentes"
+                    class="img-logo"
+                >
+
                 <h2 class="titulo-estoque">Estoque de Componentes</h2>
             </div>
-            <button class="botao-recolher">
-                recolher botão
+
+            <button
+                class="botao-recolher"
+                id="botao-menu"
+                aria-label="Recolher menu"
+                aria-expanded="true"
+                type="button"
+            >
+                <i class="fa-solid fa-angles-left"></i>
             </button>
+
             <ul>
                 <li class="itens-menu ativo">
                     <i class="fa-solid fa-house"></i>
                     <a href="#">Início</a>
                 </li>
+
                 <li class="itens-menu">
                     <i class="fa-solid fa-box"></i>
                     <a href="#">Componentes</a>
                 </li>
+
                 <li class="itens-menu">
                     <i class="fa-solid fa-shuffle"></i>
                     <a href="#">Movimentações</a>
                 </li>
+
                 <li class="itens-menu">
                     <i class="fa-solid fa-chart-line"></i>
                     <a href="#">Relatórios</a>
                 </li>
             </ul>
+
         </aside>
 
+        <main class="area-principal">
 
-<main class="area-principal">
+            <div class="card card-1">
+                <i class="fa-solid fa-box-open"></i>
 
-    <div class="card card-1">
-        <i class="fa-solid fa-box-open"></i>
+                <div class="conteudo-card">
+                    <h2 class="texto-1-card">Total de componentes</h2>
+                    <p class="dados-texto">24</p>
+                    <span class="texto-2-card">Cadastrados no estoque</span>
+                </div>
+            </div>
 
-        <div class="conteudo-card">
-            <h2 class="texto-1-card">Total de componentes</h2>
-            <p class="dados-texto">24</p>
-            <span class="texto-2-card">Cadastrados no estoque</span>
-        </div>
+            <div class="card card-2">
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div class="conteudo-card">
+                    <h2 class="texto-1-card">Em estoque</h2>
+                    <p class="dados-texto">24</p>
+                    <span class="texto-2-card">Componentes disponíveis</span>
+                </div>
+            </div>
+
+            <div class="card card-3">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <div class="conteudo-card">
+                    <h2 class="texto-1-card">Estoque mínimo</h2>
+                    <p class="dados-texto">24</p>
+                    <span class="texto-2-card">Componentes em alerta</span>
+                </div>
+            </div>
+
+            <div class="card card-4">
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <div class="conteudo-card">
+                    <h2 class="texto-1-card">Sem estoque</h2>
+                    <p class="dados-texto">24</p>
+                    <span class="texto-2-card">Componentes esgotados</span>
+                </div>
+            </div>
+
+        </main>
+
     </div>
-
-    <div class="card card-2">
-        <i class="fa-solid fa-circle-check"></i>
-
-        <div class="conteudo-card">
-            <h2 class="texto-1-card">Em estoque</h2>
-            <p class="dados-texto">24</p>
-            <span class="texto-2-card">Componentes disponíveis</span>
-        </div>
-    </div>
-
-    <div class="card card-3">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-
-        <div class="conteudo-card">
-            <h2 class="texto-1-card">Estoque mínimo</h2>
-            <p class="dados-texto">24</p>
-            <span class="texto-2-card">Componentes em alerta</span>
-        </div>
-    </div>
-
-    <div class="card card-4">
-        <i class="fa-solid fa-circle-exclamation"></i>
-
-        <div class="conteudo-card">
-            <h2 class="texto-1-card">Sem estoque</h2>
-            <p class="dados-texto">24</p>
-            <span class="texto-2-card">Componentes esgotados</span>
-        </div>
-    </div>
-
-</main>
 
     <script src="script.js"></script>
-   
 </body>
 </html>

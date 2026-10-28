@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
@@ -7,7 +8,7 @@
     --cor-fundo: #F5F6FA;
     --cor-cards: #FFFFFF;
     --cor-textos: #333333;
-    --cor-textos-segundarios: #737180;
+    --cor-textos-secundarios: #737180;
     --cor-bordas: #E4E1EA;
     --cor-azul: #3977B8;
     --cor-botoes: #574087;
@@ -23,70 +24,120 @@
     box-sizing: border-box;
 }
 
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menu lateral */
 .menu-lateral {
     width: 300px;
     min-width: 300px;
     min-height: 100vh;
-    background-color: var(--cor-lateral);
     padding: 20px;
+    background-color: var(--cor-lateral);
+    transition: width 0.3s ease, min-width 0.3s ease;
 }
 
 .img-logo {
     width: 50px;
     height: 50px;
+    object-fit: contain;
 }
 
 .cabecalho-menu {
     display: flex;
-    margin-bottom: 50px;
-    gap: 5px;
     align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
 }
 
 .titulo-estoque {
     font-family: var(--fonte);
+    font-size: 18px;
     font-weight: 300;
     color: var(--cor-fundo);
-    font-size: 18px;
+}
+
+/* Botão de recolher */
+.botao-recolher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0 20px auto;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor-botoes);
+    color: var(--cor-fundo);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-recolher:hover {
+    background-color: var(--cor-destaque);
+}
+
+/* Links do menu */
+.menu-lateral ul {
+    list-style: none;
 }
 
 .menu-lateral a {
     font-family: var(--fonte);
-    font-weight: 200;
     font-size: 18px;
+    font-weight: 200;
     color: var(--cor-fundo);
     text-decoration: none;
 }
 
 .itens-menu {
     display: flex;
-    gap: 20px;
     align-items: center;
-    list-style-type: none;
+    gap: 20px;
     padding: 14px;
-    transition: background-color 0.3s ease;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .itens-menu:hover {
     background-color: var(--cor-botoes);
-
 }
 
 .itens-menu i {
     color: var(--cor-fundo);
 }
 
-.botao-recolher {
-    background-color: var(--cor-lateral);
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+.itens-menu.ativo {
+    background-color: var(--cor-destaque);
 }
 
-.layout {
-    display: flex;
-    min-height: 100vh;
+/* Menu recolhido */
+.menu-lateral.recolhido {
+    width: 80px;
+    min-width: 80px;
+    padding: 20px 10px;
+}
+
+.menu-lateral.recolhido .titulo-estoque,
+.menu-lateral.recolhido .itens-menu a {
+    display: none;
+}
+
+.menu-lateral.recolhido .cabecalho-menu {
+    justify-content: center;
+}
+
+.menu-lateral.recolhido .botao-recolher {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-lateral.recolhido .itens-menu {
+    justify-content: center;
+    gap: 0;
+    padding: 14px 0;
 }
 
 /* Área principal */
@@ -96,30 +147,28 @@
     align-content: flex-start;
     justify-content: flex-start;
     gap: 20px;
-    padding: 20px;
     flex: 1;
     min-width: 0;
+    padding: 20px;
     background-color: var(--cor-fundo);
 }
 
-/* Estrutura compartilhada dos cards */
+/* Estrutura dos cards */
 .card {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
-
     width: 250px;
     min-height: 100px;
     padding: 12px;
     flex-shrink: 0;
-
     font-family: var(--fonte);
     border: 1px solid transparent;
     border-radius: 10px;
 }
 
-/* Bloco dos textos */
+/* Conteúdo dos cards */
 .conteudo-card {
     display: flex;
     flex-direction: column;
@@ -127,7 +176,7 @@
     min-width: 0;
 }
 
-/* Título */
+/* Título dos cards */
 .texto-1-card {
     font-family: var(--fonte);
     font-size: 13px;
@@ -144,7 +193,7 @@
     color: #000000;
 }
 
-/* Descrição */
+/* Descrição dos cards */
 .texto-2-card {
     font-family: var(--fonte);
     font-size: 13px;
@@ -152,13 +201,12 @@
     line-height: 1.4;
 }
 
-/* Ícones compartilhados */
+/* Ícones dos cards */
 .card i {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-
     width: 30px;
     height: 30px;
     border-radius: 50%;
