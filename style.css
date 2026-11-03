@@ -255,3 +255,44 @@
     background-color: #e78d8d6e;
     color: var(--cor-vermelho);
 }
+
+/*Pagina componentes*/
+
+.cabecalho-componentes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 350px;
+    align-items:center ;
+    width: 100vw;
+}
+
+.grupo-componentes {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0 0 0 15px;
+}
+
+.grupo-componentes i {
+    color: var(--cor-botoes);
+    font-size: 45px;
+}
+
+.titulo-componente {
+    font-family: var(--fonte);
+    font-weight: 500;
+    color: var(--cor-botoes);
+}
+
+.texto-componente-cabecalho {
+    font-family: var(--fonte);
+    color: var(--cor-textos-secundarios);
+    font-size: 13px;
+}
+
+.botao-componente-cadastro {
+    background-color: var(--cor-botoes-principais);
+    width: 100px;
+    height: 50px;
+}

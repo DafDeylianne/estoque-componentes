@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+       <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
     <title>Componentes</title>
 </head>
 <body>
-    
+    <div class="layout">
+
+        <aside class="menu-lateral">
+
+            <div class="cabecalho-menu">
+                <img
+                    src="img/implante-icon-removebg-preview.png"
+                    alt="Logotipo do estoque de componentes"
+                    class="img-logo"
+                >
+
+                <h2 class="titulo-estoque">Estoque de Componentes</h2>
+            </div>
+
+            <button
+                class="botao-recolher"
+                id="botao-menu"
+                aria-label="Recolher menu"
+                aria-expanded="true"
+                type="button"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul>
+                <li class="itens-menu ativo">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Início</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-box"></i>
+                    <a href="#">Componentes</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <a href="#">Movimentações</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <a href="#">Relatórios</a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <div class="area-principal">
+            <div class="cabecalho-componentes">
+                <div class="grupo-componentes">
+                    <i class="fa-solid fa-box-open"></i>
+                    <div class="espaco-tituloesub-componentes">
+                        <h1 class="titulo-componente">Componentes</h1>
+                        <p class="texto-componente-cabecalho">Gerencie os implantes cadastrados no sistema</p>
+                </div>
+                </div>
+                <button class="botao-componente-cadastro"> + Novo Componente</button>
+            </div>
+
+        </div>
+    </div>
+
+        <script src="script.js"></script>
 </body>
 </html>
