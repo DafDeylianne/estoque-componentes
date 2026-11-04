@@ -293,6 +293,44 @@
 
 .botao-componente-cadastro {
     background-color: var(--cor-botoes-principais);
-    width: 100px;
+    width: 180px;
     height: 50px;
+    font-family: var(--fonte);
+    color: var(--cor-fundo);
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
 }
+
+.campo-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.campo-pesquisa i {
+    position: absolute;
+    margin-left: 20px;
+    color: var(--cor-botoes);
+}
+
+.pesquisa {
+    margin-left: 10px;
+    padding-left: 35px;
+    width: 600px;
+    height: 35px;
+    font-family: var(--fonte);
+    color: var(--cor-botoes-principais);
+    border: 1px solid #a998cec0;
+    border-radius: 5px;
+}
+
+.filtro {
+    border-radius: 5px;
+    border: 1px solid #a998ceb6;
+    font-family: var(--fonte);
+    
+}
+
