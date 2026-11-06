@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-       <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
 
     <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
     <title>Componentes</title>
 </head>
+
 <body>
     <div class="layout">
 
         <aside class="menu-lateral">
 
             <div class="cabecalho-menu">
-                <img
-                    src="img/implante-icon-removebg-preview.png"
-                    alt="Logotipo do estoque de componentes"
-                    class="img-logo"
-                >
+                <img src="img/implante-icon-removebg-preview.png" alt="Logotipo do estoque de componentes"
+                    class="img-logo">
 
                 <h2 class="titulo-estoque">Estoque de Componentes</h2>
             </div>
 
-            <button
-                class="botao-recolher"
-                id="botao-menu"
-                aria-label="Recolher menu"
-                aria-expanded="true"
-                type="button"
-            >
+            <button class="botao-recolher" id="botao-menu" aria-label="Recolher menu" aria-expanded="true"
+                type="button">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
@@ -65,7 +59,7 @@
                     <div class="espaco-tituloesub-componentes">
                         <h1 class="titulo-componente">Componentes</h1>
                         <p class="texto-componente-cabecalho">Gerencie os implantes cadastrados no sistema</p>
-                </div>
+                    </div>
                 </div>
                 <button class="botao-componente-cadastro"> + Novo Componente</button>
             </div>
@@ -80,21 +74,41 @@
                 <option>Sem estoque</option>
             </select>
 
+            <table class="tabela-componentes">
+                <thead class="cabecalho-tabela">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Tamanho</th>
+                        <th>Quantidade</th>
+                        <th>Estoque mínimo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody class="corpo-tabela">
+                    <tr>
+                        <td>COMP-001</td>
+                        <td>Cicatrizador</td>
+                        <td>Neodent</td>
+                        <td>4,5 mm</td>
+                        <td>12</td>
+                        <td>5</td>
+                        <td>Em estoque</td>
+                        <td>Editar e excluir</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div>
+
     </div>
 
-    <table class="tabela-componentes">
-        <thead class="cabecalho-tabela">
-            <tr>
-                <th>Teste</th>
-            </tr>
-            <tbody class="corpo-tabela">
-            </tbody>
-        </thead>
-        
-    </table>
 
-        <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
