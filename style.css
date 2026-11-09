@@ -336,10 +336,12 @@
 
 .tabela-componentes {
     border: 1px solid #a998ceb6;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: var(--fonte);
     width: 100%;
-    height: 60px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
 }
 
 .cabecalho-tabela {
@@ -348,3 +350,47 @@
     color: var(--cor-textos);
 }
 
+.cabecalho-tabela th {
+    padding: 12px;
+    text-align: start;
+}
+
+.corpo-tabela td {
+    padding: 12px;
+    text-align: start;
+}
+
+.status {
+    background-color: rgb(109, 226, 109);
+    color: rgb(25, 94, 25);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.status-baixo {
+    background-color: rgb(240, 178, 65);
+    color: rgb(146, 109, 40);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.status-sem-estoque{
+    background-color: rgb(235, 76, 76);
+    color: rgb(138, 35, 35);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.icone-editar {
+    color: var(--cor-cards);
+    background-color: var(--cor-botoes-principais);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icone-excluir {
+    color: var(--cor-cards);
+    background-color: var(--cor-vermelho);
+    padding: 5px;
+    border-radius: 5px;
+}
