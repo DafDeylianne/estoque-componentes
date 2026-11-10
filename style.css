@@ -394,3 +394,9 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+.icone-editar,
+.icone-excluir {
+    cursor: pointer;
+    margin: 0 5px;
+}
