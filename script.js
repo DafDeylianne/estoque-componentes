@@ -22,3 +22,17 @@ pesquisar.addEventListener("input", function () {
         }
     });
 });
+
+filtro.addEventListener("change", function () {
+    const valorSelecionado = filtro.value;
+
+    linhasTabela.forEach(function (linha) {
+        const textoLinha = linha.textContent;
+
+        if (valorSelecionado === "Todos" || textoLinha.includes(valorSelecionado)) {
+            linha.style.display = "table-row";
+        } else {
+            linha.style.display = "none";
+        }
+    });
+});
