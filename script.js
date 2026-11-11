@@ -1,9 +1,9 @@
 const menulateral = document.querySelector(".menu-lateral");
 const botaoRecolher = document.querySelector("#botao-menu");
 const pesquisar = document.querySelector(".pesquisa");
+const filtro = document.querySelector(".filtro");
 const corpoTabela = document.querySelector(".corpo-tabela");
 const linhasTabela = document.querySelectorAll(".corpo-tabela tr");
-const filtro = document.querySelector(".filtro");
 
 botaoRecolher.addEventListener("click", function () {
     menulateral.classList.toggle("recolhido");
