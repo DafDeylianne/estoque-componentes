@@ -36,3 +36,25 @@ filtro.addEventListener("change", function () {
         }
     });
 });
+
+function atualizarTabela() {
+    const textoPesquisado = pesquisar.value.toLowerCase();
+    const valorSelecionado = filtro.value;
+
+    linhasTabela.forEach(function (linha){
+        const textoLinha = linha.textContent.toLowerCase();
+
+         if (
+        textoLinha.includes(textoPesquisado) &&
+        (
+            valorSelecionado === "Todos" ||
+            textoLinha.includes(valorSelecionado.toLowerCase())
+        )
+    ) {
+        linha.style.display = "table-row";
+    } else {
+        linha.style.display = "none";
+    }
+        
+    });
+}
