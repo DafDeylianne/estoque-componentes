@@ -1,10 +1,10 @@
-```javascript
+
 const menulateral = document.querySelector(".menu-lateral");
 const botaoRecolher = document.querySelector("#botao-menu");
 const pesquisar = document.querySelector(".pesquisa");
 const filtro = document.querySelector(".filtro");
-const corpoTabela = document.querySelector(".corpo-tabela");
 const linhasTabela = document.querySelectorAll(".corpo-tabela tr");
+const botaoNovoComponente = document.querySelector(".botao-componente-cadastro");
 
 botaoRecolher.addEventListener("click", function () {
     menulateral.classList.toggle("recolhido");
@@ -38,4 +38,7 @@ pesquisar.addEventListener("input", function () {
 filtro.addEventListener("change", function () {
     atualizarTabela();
 });
-```
+
+botaoNovoComponente.addEventListener("click", function() {
+    
+})
