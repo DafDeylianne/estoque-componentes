@@ -133,11 +133,23 @@
     <div class="conteudo-modal">
 
         <h2>Novo Componente</h2>
-        <p>Preencha os dados do componente abaixo.</p>
-
+        
         <form id="form-componente">
+            <label for="nome">Nome do Componente *</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Implante" required>
 
-            <!-- Os campos do formulário serão adicionados aqui -->
+            <label for="quantidade">Quantidade *</label>
+            <input type="text" id="quantidade" name="quantidade" placeholder="Ex: 10" required>
+
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" placeholder="Ex: Straumann" required>
+
+            <label for="tamanho">Tamanho</label>
+            <input type="text" id="tamanho" name="tamanho" placeholder="Digite o tamanho" required>
+
+            <button class="botao-caneclar-cadastro">Cancelar</button>
+            <button class="botao-slvar-cadastro">Salvar</button>
+
 
         </form>
 

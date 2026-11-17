@@ -5,6 +5,7 @@ const pesquisar = document.querySelector(".pesquisa");
 const filtro = document.querySelector(".filtro");
 const linhasTabela = document.querySelectorAll(".corpo-tabela tr");
 const botaoNovoComponente = document.querySelector(".botao-componente-cadastro");
+const modalComponente = document.querySelector("#modal-componente");
 
 botaoRecolher.addEventListener("click", function () {
     menulateral.classList.toggle("recolhido");
@@ -40,5 +41,5 @@ filtro.addEventListener("change", function () {
 });
 
 botaoNovoComponente.addEventListener("click", function() {
-    
+    modalComponente.classList.add("ativo");
 })
