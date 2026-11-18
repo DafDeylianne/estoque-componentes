@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
+    <title>Componentes</title>
+</head>
+
+<body>
+    <div class="layout">
+
+        <aside class="menu-lateral">
+
+            <div class="cabecalho-menu">
+                <img src="img/implante-icon-removebg-preview.png" alt="Logotipo do estoque de componentes"
+                    class="img-logo">
+
+                <h2 class="titulo-estoque">Estoque de Componentes</h2>
+            </div>
+
+            <button class="botao-recolher" id="botao-menu" aria-label="Recolher menu" aria-expanded="true"
+                type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul>
+                <li class="itens-menu ativo">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Início</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-box"></i>
+                    <a href="#">Componentes</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <a href="#">Movimentações</a>
+                </li>
+
+                <li class="itens-menu">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <a href="#">Relatórios</a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <div class="area-principal">
+            <div class="cabecalho-componentes">
+                <div class="grupo-componentes">
+                    <i class="fa-solid fa-box-open"></i>
+                    <div class="espaco-tituloesub-componentes">
+                        <h1 class="titulo-componente">Componentes</h1>
+                        <p class="texto-componente-cabecalho">Gerencie os implantes cadastrados no sistema</p>
+                    </div>
+                </div>
+                <button class="botao-componente-cadastro"> + Novo Componente</button>
+            </div>
+            <div class="campo-pesquisa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar por nome, código ou marca..." class="pesquisa">
+            </div>
+            <select class="filtro">
+                <option>Todos</option>
+                <option>Em estoque</option>
+                <option>Estoque baixo</option>
+                <option>Sem estoque</option>
+            </select>
+
+            <table class="tabela-componentes">
+                <thead class="cabecalho-tabela">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Tamanho</th>
+                        <th>Quantidade</th>
+                        <th>Estoque mínimo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody class="corpo-tabela">
+    <tr>
+        <td>COMP-001</td>
+        <td>Cicatrizador</td>
+        <td>Neodent</td>
+        <td>4,5 mm</td>
+        <td>12</td>
+        <td>5</td>
+        <td><span class="status">Em estoque</span></td>
+        <td><i class="fa-solid fa-pen icone-editar"></i> <i class="fa-solid fa-trash-can icone-excluir"></i></td>
+    </tr>
+
+    <tr>
+        <td>COMP-002</td>
+        <td>Implante</td>
+        <td>Straumann</td>
+        <td>3,5 mm</td>
+        <td>3</td>
+        <td>5</td>
+        <td><span class="status status-baixo">Estoque baixo</span></td>
+        <td><i class="fa-solid fa-pen icone-editar"></i> <i class="fa-solid fa-trash-can icone-excluir"></i></td>
+    </tr>
+
+    <tr>
+        <td>COMP-003</td>
+        <td>Transferente</td>
+        <td>Neodent</td>
+        <td>4,0 mm</td>
+        <td>0</td>
+        <td>5</td>
+        <td><span class="status status-sem-estoque">Sem estoque</span></td>
+        <td><i class="fa-solid fa-pen icone-editar"></i> <i class="fa-solid fa-trash-can icone-excluir"></i></td>
+    </tr>
+</tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal-componente">
+
+    <div class="conteudo-modal">
+
+        <h2>Novo Componente</h2>
+        
+        <form id="form-componente">
+            <label for="nome">Nome do Componente *</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Implante" required>
+
+            <label for="quantidade">Quantidade *</label>
+            <input type="text" id="quantidade" name="quantidade" placeholder="Ex: 10" required>
+
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" placeholder="Ex: Straumann" required>
+
+            <label for="tamanho">Tamanho</label>
+            <input type="text" id="tamanho" name="tamanho" placeholder="Digite o tamanho" required>
+
+            <button class="botao-caneclar-cadastro">Cancelar</button>
+            <button class="botao-slvar-cadastro">Salvar</button>
+
+
+        </form>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>

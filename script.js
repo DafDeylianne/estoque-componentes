@@ -6,6 +6,7 @@ const filtro = document.querySelector(".filtro");
 const linhasTabela = document.querySelectorAll(".corpo-tabela tr");
 const botaoNovoComponente = document.querySelector(".botao-componente-cadastro");
 const modalComponente = document.querySelector("#modal-componente");
+const botaoCancelar = document.querySelector(".botao-cancelar-cadastro");
 
 botaoRecolher.addEventListener("click", function () {
     menulateral.classList.toggle("recolhido");
@@ -42,4 +43,8 @@ filtro.addEventListener("change", function () {
 
 botaoNovoComponente.addEventListener("click", function() {
     modalComponente.classList.add("ativo");
+})
+
+botaoCancelar.addEventListener("click", function() {
+    modalComponente.classList.remove("ativo");
 })
