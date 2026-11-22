@@ -132,23 +132,38 @@
 
     <div class="conteudo-modal">
 
-        <h2 class="botaoCadastroComponentes">Novo Componente</h2>
+        <div class="cabecalho-modal">
+            <i class="fa-solid fa-box-archive"></i>
+            <h2 class="botaoCadastroComponentes">Novo Componente</h2>
+        </div>
         
         <form id="form-componente">
-            <label for="nome">Nome do Componente *</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Implante" required>
+            <label for="nome">Nome do Componente <span>*</span></label>
+            <div class="campo-input">
+                <i class="fa-solid fa-tag"></i>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Implante" required>
+            </div>
 
-            <label for="quantidade">Quantidade *</label>
-            <input type="text" id="quantidade" name="quantidade" placeholder="Ex: 10" required>
+            <label for="quantidade">Quantidade <span>*</span></label><br>
+            <div class="campo-input">
+                <i class="fa-solid fa-layer-group"></i>
+                <input type="text" id="quantidade" name="quantidade" placeholder="Ex: 10" required>
+            </div>
 
-            <label for="marca">Marca</label>
-            <input type="text" id="marca" name="marca" placeholder="Ex: Straumann">
+            <label for="marca">Marca</label><br>
+            <div class="campo-input">
+                <i class="fa-regular fa-bookmark"></i>
+                <input type="text" id="marca" name="marca" placeholder="Ex: Straumann">
+            </div>
 
-            <label for="tamanho">Tamanho</label>
-            <input type="text" id="tamanho" name="tamanho" placeholder="Digite o tamanho">
+            <label for="tamanho">Tamanho</label><br>
+            <div class="campo-input">
+                <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                <input type="text" id="tamanho" name="tamanho" placeholder="Digite o tamanho">
+            </div>
 
             <button type="button" class="botao-cancelar-cadastro">Cancelar</button>
-            <button type="submit" class="botao-salvar-cadastro">Salvar</button>
+            <button type="submit" class="botao-salvar-cadastro"><i class="fa-regular fa-floppy-disk"></i>   Salvar</button>
 
         </form>
 

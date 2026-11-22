@@ -403,8 +403,98 @@
 
 .modal {
     display: none;
+    justify-content: center;
 }
 
 .modal.ativo {
     display: flex;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.281);
+    z-index: 9999;
+}
+
+.conteudo-modal {
+    width: 500px;
+    max-width: 90%;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    border-radius: 10px;
+    font-family: var(--fonte);
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cabecalho-modal {
+    background-color: var(--cor-botoes);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+}
+
+.cabecalho-modal i {
+    color: var(--cor-bordas);
+    font-size: 20px;
+}
+
+.botaoCadastroComponentes{
+    color: var(--cor-bordas);
+    font-weight: 400;
+}
+
+#form-componente{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form-componente label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#form-componente label span{
+    color: var(--cor-vermelho);
+}
+
+.campo-input {
+    position: relative;
+}
+
+.campo-input i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(44, 43, 43, 0.514);
+}
+
+.campo-input input {
+    padding-left: 45px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    width: 100%;
+}
+
+.botao-cancelar-cadastro {
+    border: 1px solid var(--cor-botoes-principais);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--cor-botoes);
+    font-family: var(--fonte);
+    font-weight: 500;
+}
+
+.botao-salvar-cadastro {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--cor-botoes);
+    color: var(--cor-fundo);
+    font-weight: 400;
 }
