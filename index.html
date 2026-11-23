@@ -1,24 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Configurações da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Importa o arquivo CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Define o ícone da aba do navegador -->
     <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
 
+    <!-- Importa os ícones do Font Awesome -->
     <script src="https://kit.fontawesome.com/d00c321405.js" crossorigin="anonymous"></script>
 
+    <!-- Título da página -->
     <title>Controle de componentes</title>
 </head>
+
 <body>
 
+    <!-- ========================================
+         ESTRUTURA PRINCIPAL
+    ========================================= -->
+
+    <!-- Agrupa o menu lateral e a área principal -->
     <div class="layout">
+
+        <!-- ========================================
+             MENU LATERAL
+        ========================================= -->
 
         <aside class="menu-lateral">
 
+            <!-- Logo e título do sistema -->
             <div class="cabecalho-menu">
+
                 <img
                     src="img/implante-icon-removebg-preview.png"
                     alt="Logotipo do estoque de componentes"
@@ -26,8 +44,10 @@
                 >
 
                 <h2 class="titulo-estoque">Estoque de Componentes</h2>
+
             </div>
 
+            <!-- Botão para recolher e expandir o menu -->
             <button
                 class="botao-recolher"
                 id="botao-menu"
@@ -38,76 +58,146 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+            <!-- Lista de navegação do menu -->
             <ul>
+
+                <!-- Página inicial -->
                 <li class="itens-menu ativo">
                     <i class="fa-solid fa-house"></i>
                     <a href="#">Início</a>
                 </li>
 
+                <!-- Página de componentes -->
                 <li class="itens-menu">
                     <i class="fa-solid fa-box"></i>
                     <a href="#">Componentes</a>
                 </li>
 
+                <!-- Página de movimentações -->
                 <li class="itens-menu">
                     <i class="fa-solid fa-shuffle"></i>
                     <a href="#">Movimentações</a>
                 </li>
 
+                <!-- Página de relatórios -->
                 <li class="itens-menu">
                     <i class="fa-solid fa-chart-line"></i>
                     <a href="#">Relatórios</a>
                 </li>
+
             </ul>
 
         </aside>
 
+
+        <!-- ========================================
+             ÁREA PRINCIPAL
+        ========================================= -->
+
         <main class="area-principal">
 
+            <!-- ========================================
+                 CARDS DE RESUMO DO ESTOQUE
+            ========================================= -->
+
+            <!-- Card 1: Total de componentes cadastrados -->
             <div class="card card-1">
+
+                <!-- Ícone do card -->
                 <i class="fa-solid fa-box-open"></i>
 
+                <!-- Conteúdo do card -->
                 <div class="conteudo-card">
+
+                    <!-- Título -->
                     <h2 class="texto-1-card">Total de componentes</h2>
+
+                    <!-- Quantidade total de componentes -->
                     <p class="dados-texto">24</p>
+
+                    <!-- Descrição -->
                     <span class="texto-2-card">Cadastrados no estoque</span>
+
                 </div>
+
             </div>
 
+
+            <!-- Card 2: Componentes disponíveis em estoque -->
             <div class="card card-2">
+
+                <!-- Ícone do card -->
                 <i class="fa-solid fa-circle-check"></i>
 
+                <!-- Conteúdo do card -->
                 <div class="conteudo-card">
+
+                    <!-- Título -->
                     <h2 class="texto-1-card">Em estoque</h2>
+
+                    <!-- Quantidade de componentes disponíveis -->
                     <p class="dados-texto">24</p>
+
+                    <!-- Descrição -->
                     <span class="texto-2-card">Componentes disponíveis</span>
+
                 </div>
+
             </div>
 
+
+            <!-- Card 3: Componentes com estoque baixo -->
             <div class="card card-3">
+
+                <!-- Ícone de alerta -->
                 <i class="fa-solid fa-triangle-exclamation"></i>
 
+                <!-- Conteúdo do card -->
                 <div class="conteudo-card">
+
+                    <!-- Título -->
                     <h2 class="texto-1-card">Estoque mínimo</h2>
+
+                    <!-- Quantidade de componentes em alerta -->
                     <p class="dados-texto">24</p>
+
+                    <!-- Descrição -->
                     <span class="texto-2-card">Componentes em alerta</span>
+
                 </div>
+
             </div>
 
+
+            <!-- Card 4: Componentes sem estoque -->
             <div class="card card-4">
+
+                <!-- Ícone de alerta -->
                 <i class="fa-solid fa-circle-exclamation"></i>
 
+                <!-- Conteúdo do card -->
                 <div class="conteudo-card">
+
+                    <!-- Título -->
                     <h2 class="texto-1-card">Sem estoque</h2>
+
+                    <!-- Quantidade de componentes esgotados -->
                     <p class="dados-texto">24</p>
+
+                    <!-- Descrição -->
                     <span class="texto-2-card">Componentes esgotados</span>
+
                 </div>
+
             </div>
 
         </main>
 
     </div>
 
+    <!-- Importa o JavaScript após carregar os elementos HTML -->
     <script src="script.js"></script>
+
 </body>
+
 </html>

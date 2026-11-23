@@ -1,6 +1,11 @@
+/* ========================================
+   FONTES E VARIÁVEIS
+======================================== */
 
+/* Importa as fontes utilizadas no projeto */
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Define as fontes e cores utilizadas no sistema */
 :root {
     --fonte: 'Montserrat', sans-serif;
     --cor-lateral: #352653;
@@ -18,33 +23,56 @@
     --cor-vermelho: #C74747;
 }
 
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+/* Remove as margens e espaçamentos padrões do navegador */
 * {
     margin: 0;
     padding: 0;
+
+    /* Inclui as bordas e o padding no tamanho dos elementos */
     box-sizing: border-box;
 }
 
+/* Organiza o menu lateral e a área principal lado a lado */
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* Menu lateral */
+
+/* ========================================
+   MENU LATERAL
+======================================== */
+
 .menu-lateral {
+    /* Define a largura do menu */
     width: 300px;
     min-width: 300px;
+
+    /* Faz o menu ocupar toda a altura da tela */
     min-height: 100vh;
+
+    /* Espaçamento interno */
     padding: 20px;
+
     background-color: var(--cor-lateral);
+
+    /* Suaviza a mudança de largura ao recolher o menu */
     transition: width 0.3s ease, min-width 0.3s ease;
 }
 
+/* Define o tamanho da logo sem deformar a imagem */
 .img-logo {
     width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
+/* Organiza a logo e o título lado a lado */
 .cabecalho-menu {
     display: flex;
     align-items: center;
@@ -52,6 +80,7 @@
     margin-bottom: 30px;
 }
 
+/* Estiliza o título do sistema */
 .titulo-estoque {
     font-family: var(--fonte);
     font-size: 18px;
@@ -59,31 +88,51 @@
     color: var(--cor-fundo);
 }
 
-/* Botão de recolher */
+
+/* ========================================
+   BOTÃO DE RECOLHER O MENU
+======================================== */
+
 .botao-recolher {
+    /* Centraliza o ícone dentro do botão */
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 36px;
     height: 36px;
+
+    /* Posiciona o botão à direita */
     margin: 0 0 20px auto;
+
     border: none;
     border-radius: 6px;
     background-color: var(--cor-botoes);
     color: var(--cor-fundo);
+
+    /* Altera o cursor para uma mãozinha */
     cursor: pointer;
+
+    /* Suaviza a mudança da cor */
     transition: background-color 0.3s ease;
 }
 
+/* Altera a cor ao passar o mouse sobre o botão */
 .botao-recolher:hover {
     background-color: var(--cor-destaque);
 }
 
-/* Links do menu */
+
+/* ========================================
+   LINKS E ITENS DO MENU
+======================================== */
+
+/* Remove os marcadores da lista */
 .menu-lateral ul {
     list-style: none;
 }
 
+/* Estiliza os links e remove o sublinhado */
 .menu-lateral a {
     font-family: var(--fonte);
     font-size: 18px;
@@ -92,6 +141,7 @@
     text-decoration: none;
 }
 
+/* Organiza os ícones e textos dos itens do menu */
 .itens-menu {
     display: flex;
     align-items: center;
@@ -101,74 +151,110 @@
     transition: background-color 0.3s ease;
 }
 
+/* Altera o fundo ao passar o mouse sobre o item */
 .itens-menu:hover {
     background-color: var(--cor-botoes);
 }
 
+/* Define a cor dos ícones */
 .itens-menu i {
     color: var(--cor-fundo);
 }
 
+/* Destaca o item da página atual */
 .itens-menu.ativo {
     background-color: var(--cor-destaque);
 }
 
-/* Menu recolhido */
+
+/* ========================================
+   MENU LATERAL RECOLHIDO
+======================================== */
+
+/* Reduz a largura do menu quando a classe recolhido é adicionada */
 .menu-lateral.recolhido {
     width: 80px;
     min-width: 80px;
     padding: 20px 10px;
 }
 
+/* Esconde o título e os textos dos links */
 .menu-lateral.recolhido .titulo-estoque,
 .menu-lateral.recolhido .itens-menu a {
     display: none;
 }
 
+/* Centraliza a logo */
 .menu-lateral.recolhido .cabecalho-menu {
     justify-content: center;
 }
 
+/* Centraliza o botão de recolher */
 .menu-lateral.recolhido .botao-recolher {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Centraliza os ícones dos itens do menu */
 .menu-lateral.recolhido .itens-menu {
     justify-content: center;
     gap: 0;
     padding: 14px 0;
 }
 
-/* Área principal */
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
 .area-principal {
     display: flex;
+
+    /* Permite que os elementos quebrem para outra linha */
     flex-wrap: wrap;
+
+    /* Posiciona os elementos no início da área */
     align-content: flex-start;
     justify-content: flex-start;
+
     gap: 20px;
+
+    /* Ocupa o espaço restante da tela */
     flex: 1;
+
+    /* Permite que a área diminua conforme o espaço disponível */
     min-width: 0;
+
     padding: 20px;
     background-color: var(--cor-fundo);
 }
 
-/* Estrutura dos cards */
+
+/* ========================================
+   CARDS DA PÁGINA INICIAL
+======================================== */
+
+/* Estrutura padrão de todos os cards */
 .card {
+    /* Organiza o ícone e o conteúdo lado a lado */
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
+
     width: 250px;
     min-height: 100px;
     padding: 12px;
+
+    /* Impede que o card diminua de tamanho */
     flex-shrink: 0;
+
     font-family: var(--fonte);
     border: 1px solid transparent;
     border-radius: 10px;
 }
 
-/* Conteúdo dos cards */
+/* Organiza os textos do card verticalmente */
 .conteudo-card {
     display: flex;
     flex-direction: column;
@@ -176,7 +262,7 @@
     min-width: 0;
 }
 
-/* Título dos cards */
+/* Estiliza o título do card */
 .texto-1-card {
     font-family: var(--fonte);
     font-size: 13px;
@@ -184,7 +270,7 @@
     line-height: 1.3;
 }
 
-/* Número em destaque */
+/* Estiliza o número em destaque */
 .dados-texto {
     font-family: var(--fonte);
     font-size: 25px;
@@ -193,7 +279,7 @@
     color: #000000;
 }
 
-/* Descrição dos cards */
+/* Estiliza a descrição do card */
 .texto-2-card {
     font-family: var(--fonte);
     font-size: 13px;
@@ -201,7 +287,7 @@
     line-height: 1.4;
 }
 
-/* Ícones dos cards */
+/* Centraliza os ícones e cria um fundo circular */
 .card i {
     display: flex;
     align-items: center;
@@ -212,61 +298,75 @@
     border-radius: 50%;
 }
 
-/* Card 1 — Total */
+
+/* ========================================
+   CORES DOS CARDS
+======================================== */
+
+/* Card de total de componentes */
 .card-1 {
     border-color: #7d76bdd3;
     background-color: #c8d9eb10;
 }
 
+/* Ícone do card de total */
 .card-1 i {
     background-color: #7f9cbb3a;
     color: var(--cor-azul);
 }
 
-/* Card 2 — Em estoque */
+/* Card de componentes em estoque */
 .card-2 {
     border-color: #9ed8c167;
     background-color: #a3e0c81c;
 }
 
+/* Ícone do card em estoque */
 .card-2 i {
     background-color: #99d6bc40;
     color: var(--cor-verde);
 }
 
-/* Card 3 — Estoque mínimo */
+/* Card de componentes com estoque baixo */
 .card-3 {
     border-color: #d98b2456;
     background-color: #ecca9d48;
 }
 
+/* Ícone do card de estoque baixo */
 .card-3 i {
     background-color: #ffa63148;
     color: var(--cor-amarelo);
 }
 
-/* Card 4 — Sem estoque */
+/* Card de componentes sem estoque */
 .card-4 {
     border-color: #e762623b;
     background-color: #f06e6e41;
 }
 
+/* Ícone do card sem estoque */
 .card-4 i {
     background-color: #e78d8d6e;
     color: var(--cor-vermelho);
 }
 
-/*Pagina componentes*/
 
+/* ========================================
+   PÁGINA DE COMPONENTES
+======================================== */
+
+/* Organiza o cabeçalho e o botão de cadastro */
 .cabecalho-componentes {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     gap: 350px;
-    align-items:center ;
+    align-items: center;
     width: 100vw;
 }
 
+/* Agrupa o ícone, o título e a descrição */
 .grupo-componentes {
     display: flex;
     gap: 20px;
@@ -274,23 +374,27 @@
     margin: 0 0 0 15px;
 }
 
+/* Define a cor e o tamanho do ícone */
 .grupo-componentes i {
     color: var(--cor-botoes);
     font-size: 45px;
 }
 
+/* Estiliza o título da página */
 .titulo-componente {
     font-family: var(--fonte);
     font-weight: 500;
     color: var(--cor-botoes);
 }
 
+/* Estiliza a descrição da página */
 .texto-componente-cabecalho {
     font-family: var(--fonte);
     color: var(--cor-textos-secundarios);
     font-size: 13px;
 }
 
+/* Estiliza o botão Novo Componente */
 .botao-componente-cadastro {
     background-color: var(--cor-botoes-principais);
     width: 180px;
@@ -303,22 +407,32 @@
     font-size: 15px;
 }
 
+
+/* ========================================
+   PESQUISA E FILTRO
+======================================== */
+
+/* Organiza o campo de pesquisa e o filtro */
 .campo-pesquisa {
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
 
+/* Posiciona o ícone dentro do campo de pesquisa */
 .campo-pesquisa i {
     position: absolute;
     margin-left: 20px;
     color: var(--cor-botoes);
 }
 
+/* Estiliza o campo de pesquisa */
 .pesquisa {
     margin-left: 10px;
+
+    /* Cria espaço para o ícone */
     padding-left: 35px;
+
     width: 600px;
     height: 35px;
     font-family: var(--fonte);
@@ -327,39 +441,61 @@
     border-radius: 5px;
 }
 
+/* Estiliza o seletor de filtro */
 .filtro {
     border-radius: 5px;
     border: 1px solid #a998ceb6;
     font-family: var(--fonte);
-    
 }
+
+
+/* ========================================
+   TABELA DE COMPONENTES
+======================================== */
 
 .tabela-componentes {
     border: 1px solid #a998ceb6;
     border-radius: 10px;
     font-family: var(--fonte);
+
+    /* Ocupa toda a largura disponível */
     width: 100%;
+
+    /* Mantém as bordas das células separadas */
     border-collapse: separate;
+
+    /* Remove o espaço entre as células */
     border-spacing: 0;
+
+    /* Esconde o conteúdo que ultrapassa as bordas */
     overflow: hidden;
 }
 
+/* Estiliza o cabeçalho da tabela */
 .cabecalho-tabela {
     background: #a998ceb6;
     font-weight: 100;
     color: var(--cor-textos);
 }
 
+/* Define o espaçamento e alinhamento dos títulos */
 .cabecalho-tabela th {
     padding: 12px;
     text-align: start;
 }
 
+/* Define o espaçamento e alinhamento dos dados */
 .corpo-tabela td {
     padding: 12px;
     text-align: start;
 }
 
+
+/* ========================================
+   STATUS DOS COMPONENTES
+======================================== */
+
+/* Status de componentes em estoque */
 .status {
     background-color: rgb(109, 226, 109);
     color: rgb(25, 94, 25);
@@ -367,6 +503,7 @@
     padding: 5px;
 }
 
+/* Status de componentes com estoque baixo */
 .status-baixo {
     background-color: rgb(240, 178, 65);
     color: rgb(146, 109, 40);
@@ -374,13 +511,20 @@
     padding: 5px;
 }
 
-.status-sem-estoque{
+/* Status de componentes sem estoque */
+.status-sem-estoque {
     background-color: rgb(235, 76, 76);
     color: rgb(138, 35, 35);
     border-radius: 5px;
     padding: 5px;
 }
 
+
+/* ========================================
+   ÍCONES DE AÇÕES DA TABELA
+======================================== */
+
+/* Estiliza o ícone de editar */
 .icone-editar {
     color: var(--cor-cards);
     background-color: var(--cor-botoes-principais);
@@ -388,6 +532,7 @@
     border-radius: 5px;
 }
 
+/* Estiliza o ícone de excluir */
 .icone-excluir {
     color: var(--cor-cards);
     background-color: var(--cor-vermelho);
@@ -395,38 +540,69 @@
     border-radius: 5px;
 }
 
+/* Define o cursor e o espaçamento dos dois ícones */
 .icone-editar,
 .icone-excluir {
     cursor: pointer;
     margin: 0 5px;
 }
 
+
+/* ========================================
+   MODAL DE CADASTRO DE COMPONENTES
+======================================== */
+
+/* Mantém o modal escondido inicialmente */
 .modal {
     display: none;
     justify-content: center;
 }
 
+/* Exibe o modal quando a classe ativo é adicionada */
 .modal.ativo {
     display: flex;
+
+    /* Mantém o modal fixo sobre a página */
     position: fixed;
+
+    /* Faz o fundo do modal ocupar toda a tela */
     inset: 0;
+
+    /* Centraliza o conteúdo do modal */
     align-items: center;
     justify-content: center;
+
+    /* Escurece o fundo da página */
     background-color: rgba(0, 0, 0, 0.281);
+
+    /* Mantém o modal acima dos outros elementos */
     z-index: 9999;
 }
 
+/* Estiliza a caixa do modal */
 .conteudo-modal {
     width: 500px;
+
+    /* Limita a largura em telas menores */
     max-width: 90%;
+
     background-color: var(--cor-fundo);
     border-radius: 10px;
-    border-radius: 10px;
     font-family: var(--fonte);
+
+    /* Impede que o conteúdo ultrapasse as bordas */
     overflow: hidden;
+
+    /* Adiciona uma sombra ao modal */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+
+/* ========================================
+   CABEÇALHO DO MODAL
+======================================== */
+
+/* Organiza o ícone, o título e o botão de fechar */
 .cabecalho-modal {
     background-color: var(--cor-botoes);
     padding: 15px;
@@ -436,51 +612,85 @@
     align-items: center;
 }
 
+/* Define a cor e o tamanho dos ícones */
 .cabecalho-modal i {
     color: var(--cor-bordas);
     font-size: 20px;
 }
 
-.botaoCadastroComponentes{
+/* Posiciona o X no canto direito do cabeçalho */
+.fechar-modal {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* Estiliza o título do modal */
+.botaoCadastroComponentes {
     color: var(--cor-bordas);
     font-weight: 400;
 }
 
-#form-componente{
+
+/* ========================================
+   FORMULÁRIO DE CADASTRO
+======================================== */
+
+/* Organiza os campos do formulário verticalmente */
+#form-componente {
     padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+/* Estiliza os títulos dos campos */
 #form-componente label {
     font-size: 14px;
     font-weight: 500;
 }
 
-#form-componente label span{
+/* Destaca o asterisco dos campos obrigatórios */
+#form-componente label span {
     color: var(--cor-vermelho);
 }
 
+/* Serve como referência para posicionar o ícone */
 .campo-input {
     position: relative;
 }
 
+/* Posiciona o ícone dentro do campo */
 .campo-input i {
     position: absolute;
+
+    /* Define a distância do lado esquerdo */
     left: 15px;
+
+    /* Centraliza o ícone verticalmente */
     top: 50%;
     transform: translateY(-50%);
+
     color: rgba(44, 43, 43, 0.514);
 }
 
+/* Estiliza os campos de preenchimento */
 .campo-input input {
+    /* Cria espaço para o ícone */
     padding-left: 45px;
+
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.178);
+
+    /* Ocupa toda a largura disponível */
     width: 100%;
 }
 
+
+/* ========================================
+   BOTÕES DO FORMULÁRIO
+======================================== */
+
+/* Estiliza o botão Cancelar */
 .botao-cancelar-cadastro {
     border: 1px solid var(--cor-botoes-principais);
     border-radius: 5px;
@@ -490,6 +700,7 @@
     font-weight: 500;
 }
 
+/* Estiliza o botão Salvar */
 .botao-salvar-cadastro {
     border: none;
     border-radius: 5px;
@@ -497,4 +708,19 @@
     background-color: var(--cor-botoes);
     color: var(--cor-fundo);
     font-weight: 400;
+}
+
+/* Organiza os botões lado a lado */
+.botoes {
+    display: flex;
+    flex-direction: row;
+
+    /* Espaçamento entre os botões */
+    gap: 15px;
+
+    /* Afasta os botões dos campos do formulário */
+    margin-top: 20px;
+
+    /* Posiciona os botões à direita */
+    justify-content: flex-end;
 }
