@@ -7,6 +7,8 @@ const botaoNovoComponente = document.querySelector(".botao-componente-cadastro")
 const modalComponente = document.querySelector("#modal-componente");// Seleciona o modal de cadastro
 const botaoCancelar = document.querySelector(".botao-cancelar-cadastro");// Seleciona o botão de cancelar
 const botaoFechar = document.querySelector(".fechar-modal");// Seleciona o botão X do modal
+const formComponente = document.querySelector("#form-componente"); // Seleciona o formulário de cadastro
+const corpoTabela = document.querySelector(".corpo-tabela");
 
 // MENU LATERAL
 
@@ -81,3 +83,69 @@ botaoFechar.addEventListener("click", function () {
 });
 
 // CADASTRO DE COMPONENTES
+formComponente.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Captura os valores do formulário
+    const nomeComponente = document.querySelector("#nome").value;
+    const quantidadeComponente = document.querySelector("#quantidade").value;
+    const marcaComponente = document.querySelector("#marca").value;
+    const tamanhoComponente = document.querySelector("#tamanho").value;
+
+    // Conta os componentes existentes na tabela
+    const totalComponentes = corpoTabela.querySelectorAll("tr").length;
+
+    // Calcula o próximo número
+    const proximoNumero = totalComponentes + 1;
+
+    // Transforma o número em texto
+    const texto = proximoNumero.toString();
+
+    // Formata o número com zeros à esquerda
+    const numeroFormatado = texto.padStart(3, "0");
+
+    const codigoComponente = "COMP-" + numeroFormatado;
+
+    console.log(codigoComponente);
+
+
+    // Aqui vamos calcular o próximo número
+
+    // Cria o objeto do componente
+    const componente = {
+        codigo: codigoComponente,
+        nome: nomeComponente,
+        quantidade: quantidadeComponente,
+        marca: marcaComponente,
+        tamanho: tamanhoComponente
+    };
+
+    console.log(componente);
+
+    const novaLinha = document.createElement("tr");
+    const celulaCodigo = document.createElement("td");
+    celulaCodigo.textContent = componente.codigo;
+    const celulaNome = document.createElement("td");
+    celulaNome.textContent = componente.nome;
+    const celulaQuantidade = document.createElement("td");
+    celulaQuantidade.textContent = componente.quantidade;
+    const celulaMarca = document.createElement("td");
+    celulaMarca.textContent = componente.marca;
+    const celulaTamanho = document.createElement("td");
+    celulaTamanho.textContent = componente.tamanho;
+
+    novaLinha.appendChild(celulaCodigo)
+    novaLinha.appendChild(celulaNome);
+    novaLinha.appendChild(celulaMarca);
+    novaLinha.appendChild(celulaTamanho);
+    novaLinha.appendChild(celulaQuantidade);
+    
+
+    // Adiciona a nova linha ao corpo da tabela
+    corpoTabela.appendChild(novaLinha);
+    // Limpa os campos do formulário
+    formComponente.reset();
+    // Fecha o modal após cadastrar o componente
+    modalComponente.classList.remove("ativo");
+
+});
